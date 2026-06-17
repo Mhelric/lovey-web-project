@@ -746,18 +746,18 @@ input#show-toggle {
     animation: popTimelineCard 0.5s ease forwards;
 }
 
-/* Stagger item fade-ins to sync nicely with the downward growing line */
+/* Stagger item fade-ins smoothly starting right from the top entry */
 .slide.active .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-.slide.active .timeline-item:nth-child(2) { animation-delay: 0.6s; }
-.slide.active .timeline-item:nth-child(3) { animation-delay: 1.1s; }
-.slide.active .timeline-item:nth-child(4) { animation-delay: 1.6s; }
-.slide.active .timeline-item:nth-child(5) { animation-delay: 2.1s; }
-.slide.active .timeline-item:nth-child(6) { animation-delay: 2.6s; }
-.slide.active .timeline-item:nth-child(7) { animation-delay: 3.1s; }
-.slide.active .timeline-item:nth-child(8) { animation-delay: 3.6s; }
-.slide.active .timeline-item:nth-child(9) { animation-delay: 4.1s; }
-.slide.active .timeline-item:nth-child(10) { animation-delay: 4.6s; }
-.slide.active .timeline-item:nth-child(11) { animation-delay: 5.1s; }
+.slide.active .timeline-item:nth-child(2) { animation-delay: 0.5s; }
+.slide.active .timeline-item:nth-child(3) { animation-delay: 0.9s; }
+.slide.active .timeline-item:nth-child(4) { animation-delay: 1.3s; }
+.slide.active .timeline-item:nth-child(5) { animation-delay: 1.7s; }
+.slide.active .timeline-item:nth-child(6) { animation-delay: 2.1s; }
+.slide.active .timeline-item:nth-child(7) { animation-delay: 2.5s; }
+.slide.active .timeline-item:nth-child(8) { animation-delay: 2.9s; }
+.slide.active .timeline-item:nth-child(9) { animation-delay: 3.3s; }
+.slide.active .timeline-item:nth-child(10) { animation-delay: 3.7s; }
+.slide.active .timeline-item:nth-child(11) { animation-delay: 4.1s; }
 
 @keyframes popTimelineCard {
     from { opacity: 0; transform: scale(0.85); }
