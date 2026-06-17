@@ -380,12 +380,20 @@ function nextSlide(slideNumber) {
         target.classList.remove('hidden');
         target.classList.add('active');
         
-        // 1. Reset scroll instantly
+        // 1. Force an instant reset to the top
         target.scrollTop = 0; 
         
-        // 2. Reset scroll again after 100ms to override mobile layout/animation shifts
-        setTimeout(() => {
+        // 2. Continuous Scroll Guard: Keeps forcing the timeline to stay at the top 
+        // every 100ms for 2 full seconds to completely defeat browser layout auto-scrolling!
+        let lockCount = 0;
+        const scrollLockInterval = setInterval(() => {
             target.scrollTop = 0;
+            lockCount++;
+            
+            // After 20 runs (2000ms / 2 seconds), clear the lock so she can scroll normally!
+            if (lockCount > 20) {
+                clearInterval(scrollLockInterval);
+            }
         }, 100);
     }
 
