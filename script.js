@@ -1,14 +1,8 @@
 // ======================================================
 // 1. CONFIGURATION
 // ======================================================
-const CORRECT_PASSWORD = "sabaw"; 
-const START_DATE = new Date("2025-10-18"); // Your start date
-
-// ======================================================
-// 1. CONFIGURATION
-// ======================================================
 const CORRECT_PASSWORD = "wise man say"; 
-const START_DATE = new Date("2025-10-18"); 
+const START_DATE = new Date("2025-06-16"); 
 
 // THE MILESTONES (Add new years here! Keep highest year at the top)
 const MILESTONES = [
