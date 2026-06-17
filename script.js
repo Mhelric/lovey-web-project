@@ -379,7 +379,14 @@ function nextSlide(slideNumber) {
     if(target) {
         target.classList.remove('hidden');
         target.classList.add('active');
-        target.scrollTop = 0;
+        
+        // 1. Reset scroll instantly
+        target.scrollTop = 0; 
+        
+        // 2. Reset scroll again after 100ms to override mobile layout/animation shifts
+        setTimeout(() => {
+            target.scrollTop = 0;
+        }, 100);
     }
 
     // --- FULL SCREEN BACKGROUND LOGIC ---
