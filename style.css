@@ -546,3 +546,71 @@ input#show-toggle {
     cursor: pointer;
     font-weight: 500;
 }
+
+/* =========================================
+   9. MOBILE RESPONSIVENESS FIXES
+   ========================================= */
+@media screen and (max-width: 480px) {
+    /* 1. Fix the floating UI buttons so they don't overlap */
+    #music-control, #logout-btn, .close-overlay-btn {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    
+    #days-counter {
+        font-size: 10px;
+        padding: 6px 10px;
+        max-width: 120px; /* Prevents it from stretching too wide */
+    }
+    
+    #day-number {
+        font-size: 14px; /* Slightly smaller number */
+    }
+
+    #logout-btn {
+        top: 50px; /* Move slightly up to match smaller music button */
+    }
+
+    /* 2. Fix Card Padding and Headings */
+    .card {
+        padding: 25px 15px 20px 15px; /* Give text more breathing room */
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    /* 3. Adjust the Harana / YouTube spacing */
+    .video-wrapper {
+        margin-bottom: 10px;
+    }
+
+    /* 4. Fix the Reasons Wall buttons and header */
+    .reasons-header {
+        padding: 15px 25px;
+        width: 70%; /* Prevent it from touching screen edges */
+    }
+
+    .reasons-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .floating-nav-buttons {
+        bottom: 15px;
+    }
+
+    .floating-nav-buttons button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    /* 5. Adjust the Glass Box on the final slide */
+    .final-glass-box {
+        padding: 20px 15px;
+        max-width: 95%;
+    }
+}
