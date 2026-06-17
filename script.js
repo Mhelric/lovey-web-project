@@ -382,8 +382,8 @@ function nextSlide(slideNumber) {
     }
 
     // --- FULL SCREEN BACKGROUND LOGIC ---
-    // If we are on slide 5, add the special class to body. Otherwise remove it.
-    if (slideNumber === 5) {
+    // If we are on slide 6, add the special class to body. Otherwise remove it.
+    if (slideNumber === 6) {
         document.body.classList.add('final-slide-active');
     } else {
         document.body.classList.remove('final-slide-active');
