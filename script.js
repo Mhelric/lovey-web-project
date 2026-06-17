@@ -1,19 +1,20 @@
 // ======================================================
 // 1. CONFIGURATION
 // ======================================================
-const CORRECT_PASSWORD = "sabaw"; 
-const START_DATE = new Date("2025-06-16"); 
+const CORRECT_PASSWORD = "wise man say"; 
+const DATE_MET = new Date("2025-10-18"); // The day you met
+const DATE_TOGETHER = new Date("2026-04-27"); // The day you became official!
 
 // THE MILESTONES (Add new years here! Keep highest year at the top)
 const MILESTONES = [
     {
         year: 5,
-        title: "5 Years Together! 🥂",
+        title: "5 Years since nung makilala kita loveyyy! 🥂",
         message: "Half a decade with my favorite person. I love you more today than yesterday, but not as much as tomorrow!"
     },
     {
         year: 1,
-        title: "Happy 1st Anniversary! 🎉",
+        title: "Happy 1 year since nung first chat natin loveyyy! 🎉",
         message: "Can you believe it's been a whole year? Time flies when you're having fun with the love of your life!"
     }
 ];
@@ -510,9 +511,18 @@ function playMusic() {
 // ======================================================
 function updateCounter() {
     const now = new Date();
-    const timeDiff = now - START_DATE;
-    const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    document.getElementById('day-number').innerText = dayDiff;
+    
+    // Calculate Days Together
+    const togetherDiff = now - DATE_TOGETHER;
+    const daysTogether = Math.floor(togetherDiff / (1000 * 60 * 60 * 24));
+    
+    // Calculate Days Known
+    const metDiff = now - DATE_MET;
+    const daysKnown = Math.floor(metDiff / (1000 * 60 * 60 * 24));
+
+    // Update the numbers on the screen. (Use Math.max to prevent negative numbers if testing before April 27!)
+    document.getElementById('days-together').innerText = Math.max(0, daysTogether);
+    document.getElementById('days-known').innerText = daysKnown;
 }
 
 function createHeartRain() {
@@ -591,7 +601,7 @@ function togglePassword() {
 // ======================================================
 function checkMilestones() {
     const now = new Date();
-    const timeDiff = now - START_DATE;
+    const timeDiff = now - DATE_TOGETHER;
     const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
     const yearDiff = dayDiff / 365; // Calculate how many years have passed
 
