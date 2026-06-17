@@ -379,6 +379,7 @@ function nextSlide(slideNumber) {
     if(target) {
         target.classList.remove('hidden');
         target.classList.add('active');
+        target.scrollTop = 0;
     }
 
     // --- FULL SCREEN BACKGROUND LOGIC ---
