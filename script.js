@@ -408,7 +408,7 @@ function nextSlide(slideNumber) {
     // --- SMART AUDIO LOGIC ---
     const bgMusic = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-control');
-    const youtubeFrame = document.getElementById('youtube-player');
+    const videoFrame = document.getElementById('video-player'); // Updated ID selector
 
     if (slideNumber === 3) {
         // CASE: ENTERING VIDEO SLIDE
@@ -417,22 +417,17 @@ function nextSlide(slideNumber) {
     } 
     else {
         // CASE: LEAVING VIDEO SLIDE
-        if (youtubeFrame) {
-            const currentSrc = youtubeFrame.src;
-            youtubeFrame.src = currentSrc; 
+        if (videoFrame) {
+            const currentSrc = videoFrame.src;
+            videoFrame.src = currentSrc; // Resets Google Drive player stream instantly on leave
         }
         
-        // Resume music if logged in and NOT on slide 5
-        // (Music keeps playing on final slide unless manually stopped)
-        if (slideNumber !== 0 && bgMusic.paused) {
+        // Resume background music if logged in and NOT on the final slide
+        if (slideNumber !== 0 && slideNumber !== 6 && bgMusic.paused) {
             bgMusic.play();
             musicBtn.innerText = "Music: ON 🎵";
         }
     }
-
-    // Scroll to top
-    window.scrollTo(0, 0);
-}
 
 // ======================================================
 // 4. FEATURE: INFINITE SCROLLING WALL
