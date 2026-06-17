@@ -1,7 +1,7 @@
 // ======================================================
 // 1. CONFIGURATION
 // ======================================================
-const CORRECT_PASSWORD = "wise man say"; 
+const CORRECT_PASSWORD = "sabaw"; 
 const START_DATE = new Date("2025-10-18"); // Your start date
 
 // THE 274 REASONS DATA
