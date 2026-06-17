@@ -614,3 +614,42 @@ input#show-toggle {
         max-width: 95%;
     }
 }
+
+/* =========================================
+   10. MILESTONE TIME CAPSULE POPUP
+   ========================================= */
+#milestone-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 10000; /* Highest z-index to appear over everything */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.milestone-box {
+    background: var(--card-bg);
+    border: 3px solid var(--love-pink);
+    border-radius: 20px;
+    padding: 30px;
+    width: 85%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease;
+}
+
+.milestone-box h2 {
+    color: var(--love-pink);
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.milestone-box p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}

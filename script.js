@@ -4,6 +4,26 @@
 const CORRECT_PASSWORD = "sabaw"; 
 const START_DATE = new Date("2025-10-18"); // Your start date
 
+// ======================================================
+// 1. CONFIGURATION
+// ======================================================
+const CORRECT_PASSWORD = "wise man say"; 
+const START_DATE = new Date("2025-10-18"); 
+
+// THE MILESTONES (Add new years here! Keep highest year at the top)
+const MILESTONES = [
+    {
+        year: 5,
+        title: "5 Years Together! 🥂",
+        message: "Half a decade with my favorite person. I love you more today than yesterday, but not as much as tomorrow!"
+    },
+    {
+        year: 1,
+        title: "Happy 1st Anniversary! 🎉",
+        message: "Can you believe it's been a whole year? Time flies when you're having fun with the love of your life!"
+    }
+];
+
 // THE 274 REASONS DATA
 const loveNotes = [
     "1. I love that we clicked and connected so quick when we first started talking",
@@ -314,6 +334,7 @@ function attemptLogin() {
         // 5. Navigate to Slide 1 (Intro) after delay
         setTimeout(() => {
             nextSlide(1);
+            checkMilestones();
         }, 1500);
 
     } else {
@@ -569,4 +590,27 @@ function togglePassword() {
     } else {
         input.type = "password"; // Show dots
     }
+}
+
+// ======================================================
+// 10. FEATURE: MILESTONE POPUP
+// ======================================================
+function checkMilestones() {
+    const now = new Date();
+    const timeDiff = now - START_DATE;
+    const dayDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const yearDiff = dayDiff / 365; // Calculate how many years have passed
+
+    // Find the first milestone in the list that has been reached
+    const milestone = MILESTONES.find(m => yearDiff >= m.year);
+
+    if (milestone) {
+        document.getElementById('milestone-title').innerText = milestone.title;
+        document.getElementById('milestone-message').innerText = milestone.message;
+        document.getElementById('milestone-overlay').classList.remove('hidden');
+    }
+}
+
+function closeMilestone() {
+    document.getElementById('milestone-overlay').classList.add('hidden');
 }
