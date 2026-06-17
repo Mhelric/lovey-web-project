@@ -1,7 +1,7 @@
 // ======================================================
 // 1. CONFIGURATION
 // ======================================================
-const CORRECT_PASSWORD = "wise man say"; 
+const CORRECT_PASSWORD = "sabaw"; 
 const START_DATE = new Date("2025-06-16"); 
 
 // THE MILESTONES (Add new years here! Keep highest year at the top)
@@ -599,9 +599,18 @@ function checkMilestones() {
     const milestone = MILESTONES.find(m => yearDiff >= m.year);
 
     if (milestone) {
-        document.getElementById('milestone-title').innerText = milestone.title;
-        document.getElementById('milestone-message').innerText = milestone.message;
-        document.getElementById('milestone-overlay').classList.remove('hidden');
+        // Look into the browser's memory to see what the highest milestone shown is
+        const highestShown = parseInt(localStorage.getItem('highest_milestone_shown')) || 0;
+
+        // ONLY show the popup if the current milestone is greater than what she has already seen
+        if (milestone.year > highestShown) {
+            document.getElementById('milestone-title').innerText = milestone.title;
+            document.getElementById('milestone-message').innerText = milestone.message;
+            document.getElementById('milestone-overlay').classList.remove('hidden');
+
+            // Save this new milestone to the browser's memory so it doesn't show again!
+            localStorage.setItem('highest_milestone_shown', milestone.year);
+        }
     }
 }
 
