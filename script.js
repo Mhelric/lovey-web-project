@@ -1,36 +1,28 @@
 // ======================================================
-// 1. CONFIGURATION
+// 1. CONFIGURATION & MILESTONES
 // ======================================================
 const CORRECT_PASSWORD = "sabaw"; 
-const DATE_MET = new Date("2025-10-18"); // The day you met
-const DATE_TOGETHER = new Date("2026-04-27"); // The day you became official!
+const DATE_MET = new Date("2024-10-18"); // When you met
+const DATE_TOGETHER = new Date("2025-04-27"); // Official relationship date
 
-// THE MILESTONES (Add new years here! Keep highest year at the top)
 const MILESTONES = [
     {
         year: 5,
-        type: "together", // Official anniversary
+        type: "together",
         title: "5 Years Official! 🥂",
-        message: "I cant believe it but we're here my lovey! I will continue on loving you more!!!"
-    },
-    {
-        
-        year: 5,
-        type: "met", // The day you met
-        title: "5 Years since nung makilala kita loveyyy! 🥂",
         message: "Half a decade with my favorite person. I love you more today than yesterday, but not as much as tomorrow!"
     },
-     {
+    {
         year: 1,
-        type: "together", // Official anniversary
-        title: "Happy 1st Anniversary my lovey!! 🥂",
+        type: "together",
+        title: "Happy 1st Anniversary! 🎉",
         message: "Can you believe it's been a whole year since we became official? Time flies when you're having fun with the love of your life!"
     },
     {
         year: 1,
-        type: "met", // The day you met
-        title: "Happy 1 year since nung first chat natin loveyyy! 🎉",
-        message: "One year ago today, you walked into my life and changed everything for the better. I am so thankful I met you lovey ko!"
+        type: "met",
+        title: "1 Year Since We Met! 🌟",
+        message: "One year ago today, you walked into my life and changed everything for the better. I am so thankful I met you!"
     }
 ];
 
@@ -54,7 +46,7 @@ const loveNotes = [
     "16. I love it when she gets jealous over small things, it makes her cute",
     "17. I love and find it attractive when she counts down when she wants me to repeat something lol",
     "18. I love it when we talk about having kids",
-    "19. I love that she changes how I think about God🩷",
+    "19. I love that she changes how I think about God\uD83E\uDE77",
     "20. I love that she's being a very good influence for me",
     "21. I love that I want to improve myself just for the sake of both of us because I love her",
     "22. I love her soft and gentle laugh",
@@ -65,7 +57,7 @@ const loveNotes = [
     "27. I love how kind she is",
     "28. I love how funny she can be",
     "29. I love it when she's moody",
-    "30. I love when she says she likes me🩷",
+    "30. I love when she says she likes me\uD83E\uDE77",
     "31. I love when she calls me her baby",
     "32. I love it when she flirts",
     "33. I love it when we have a long calls at night",
@@ -96,12 +88,12 @@ const loveNotes = [
     "58. I love it when she kisses me (hopefully irl soon)",
     "59. I love it when she hugs me",
     "60. I love it when she's clingy",
-    "61. I love it that she shows how affectionate she is to me 🥹",
+    "61. I love it that she shows how affectionate she is to me \uD83E\uDD7A",
     "62. I love that she's God fearing",
     "63. I love that she wants to build a family with me",
     "64. I love that she only wants me",
     "65. I love that she's greedy when it comes to me",
-    "66. I love it when she gets jealous so easily cause I know then that she really likes me😭",
+    "66. I love it when she gets jealous so easily cause I know then that she really likes me\uD83D\uDE2D",
     "67. I love how fair her skin is",
     "68. I love her even if she's sexy or not, idc",
     "69. I love her vibes",
@@ -112,7 +104,7 @@ const loveNotes = [
     "74. I love that we both want to go to Japan soon",
     "75. I love that we have good similarities",
     "76. I love that we can be weird to each other and not get turned off",
-    "77. I love that she accepts me even if I act weird😆",
+    "77. I love that she accepts me even if I act weird\uD83D\uDE06",
     "78. I love that she acts like a mom already",
     "79. I love it when she sends me cute pictures",
     "80. I love it when she wears simple clothes",
@@ -128,12 +120,12 @@ const loveNotes = [
     "90. I love how thoughtful she acts to anyone even to people she doesnt even know",
     "91. I love that shes very vivacious",
     "92. I love how inspiring she can be to me everyday",
-    "93. I love how sweet she is🥹",
+    "93. I love how sweet she is\uD83E\uDD7A",
     "94. I love her because she's very lovely",
     "95. I love how dependable she is, even if she acts independent most of the time",
     "96. I love how passionate she can be towards her goals",
     "97. I love how sincere she is with her feelings",
-    "98. I love her wittiness 😆",
+    "98. I love her wittiness \uD83D\uDE06",
     "99. I love how magnetic she is, she attracts me so deep",
     "100. I love how strong she can be",
     "101. I love how unique my love is for her, she's one of a kind",
@@ -161,16 +153,16 @@ const loveNotes = [
     "123. I love how accepting she is",
     "124. I love that she still gave me a chance despite me being immature",
     "125. I love that we will spend Christmas this year and more Christmas in the future",
-    "126. I love that we bought bracelets with our names for one another🫶🏻🎁",
+    "126. I love that we bought bracelets with our names for one another\uD83E\uDEF6\uD83C\uDF81",
     "127. I love how she made me believe on God once again",
     "128. I love how God made us meet each other",
     "129. I love that God made it possible for me to be able and love Jaira so much",
     "130. I love that Jai is the only woman who made my life colorful",
     "131. I love it when we spend the night on calls or chats",
-    "132. I love how deep she cares for me and my sake🥹",
+    "132. I love how deep she cares for me and my sake\uD83E\uDD7A",
     "133. I love how she corrects me when I do something wrong",
     "134. I love how cute she looks when she shares her naughty or freaky thoughts",
-    "135. I love that she’s comfortable enough to show me her naughty side",
+    "135. I love that she\u2019s comfortable enough to show me her naughty side",
     "136. I love her unique cravings, like eating fruits dipped in salt, vinegar, and chili",
     "137. I love how strictly concerned she gets regarding my sleep schedule",
     "138. I love that she scolds me for staying up late because she wants me healthy",
@@ -197,7 +189,7 @@ const loveNotes = [
     "159. I love that she makes me realize how lucky of a guy I am",
     "160. I love feeling like I won the lottery because I have her",
     "161. I love knowing that I am truly blessed to have her in my life",
-    "162. I love that she is the absolute best plot twist I’ve ever had",
+    "162. I love that she is the absolute best plot twist I\u2019ve ever had",
     "163. I love that she arrived when I least expected it but needed it most",
     "164. I love looking forward to waking up next to her in the future",
     "165. I love that she makes me excited for what tomorrow brings for us",
@@ -224,7 +216,7 @@ const loveNotes = [
     "186. I love that she loves the names I chose: Calfric and Jheira",
     "187. I love that she sees me as the father of her future children",
     "188. I love how she gets annoyed when I tell her my corny cow jokes",
-    "189. I love teasing her just because she looks so fricking cute when she’s annoyed",
+    "189. I love teasing her just because she looks so fricking cute when she\u2019s annoyed",
     "190. I love that I can be my playful self around her without judgment",
     "191. I love the funny moments when she asks 'what time is it' just to scold me",
     "192. I love pretending I don't know she's actually telling me to go to sleep",
@@ -240,7 +232,7 @@ const loveNotes = [
     "202. I love that she makes the distance between us feel smaller",
     "203. I love that our connection is stronger than any distance",
     "204. I love the way she types her messages to me",
-    "205. I love getting a notification that’s from her",
+    "205. I love getting a notification that\u2019s from her",
     "206. I love how she makes my heart race even after all this time",
     "207. I love that I never get bored of talking to her",
     "208. I love that we can talk about everything and nothing at the same time",
@@ -268,13 +260,13 @@ const loveNotes = [
     "230. I love that she is the reason I smile at my phone like a fool",
     "231. I love that she makes me happier than I ever thought possible",
     "232. I love that I can't imagine my life without her anymore",
-    "233. I love that she checks on me to make sure I’ve eaten",
+    "233. I love that she checks on me to make sure I\u2019ve eaten",
     "234. I love that she prays for my safety whenever I leave the house",
     "235. I love how she gets excited about small achievements",
     "236. I love that she appreciates even the little efforts I make for her",
     "237. I love that she doesn't like keeping secrets from me",
     "238. I love how honest she is about her feelings, even the messy ones",
-    "239. I love that she tells me when she’s upset so we can fix it immediately",
+    "239. I love that she tells me when she\u2019s upset so we can fix it immediately",
     "240. I love that she values communication over giving me the silent treatment",
     "241. I love that she sends me funny videos or memes she finds",
     "242. I love that we share the same broken sense of humor",
@@ -321,34 +313,26 @@ function attemptLogin() {
     const errorMsg = document.getElementById('error-msg');
 
     if (input === CORRECT_PASSWORD) {
-        // SUCCESS STATE
         mascot.src = "art/success.png";
         errorMsg.innerText = "Correct!";
         errorMsg.style.color = "#D500F9";
         
-        // 1. Play Background Music
         playMusic();
         
-        // 2. Reveal UI Elements
         document.getElementById('music-control').classList.remove('hidden');
         document.getElementById('logout-btn').classList.remove('hidden'); 
         document.getElementById('days-counter').classList.remove('hidden');
         updateCounter();
         
-        // 3. Trigger Hearts
         createHeartRain(); 
-        
-        // 4. Build the 1000 Reasons Wall (Prepare it now)
         populateWall();
 
-        // 5. Navigate to Slide 1 (Intro) after delay
         setTimeout(() => {
             nextSlide(1);
-            checkMilestones();
+            checkMilestones(); // Triggers the Time Capsule logic smoothly upon login
         }, 1500);
 
     } else {
-        // ERROR STATE
         mascot.src = "art/error.png";
         mascot.classList.add('shake');
         errorMsg.innerText = "Wrong password!";
@@ -363,110 +347,77 @@ function attemptLogin() {
 }
 
 // ======================================================
-// 3. SLIDE NAVIGATION (Handles YouTube, Music, & Backgrounds)
+// 3. SLIDE NAVIGATION (Video reset, Music & Custom Backgrounds)
 // ======================================================
 function nextSlide(slideNumber) {
-    // Hide all slides
     document.querySelectorAll('.slide').forEach(slide => {
         slide.classList.remove('active');
         slide.classList.add('hidden');
     });
 
-    // Show target slide
     let targetId = slideNumber === 0 ? 'slide-login' : 'slide-' + slideNumber;
     const target = document.getElementById(targetId);
     
     if(target) {
         target.classList.remove('hidden');
         target.classList.add('active');
-        
-        // 1. Force an instant reset to the top
-        target.scrollTop = 0; 
-        
-        // 2. Continuous Scroll Guard: Keeps forcing the timeline to stay at the top 
-        // every 100ms for 2 full seconds to completely defeat browser layout auto-scrolling!
-        let lockCount = 0;
-        const scrollLockInterval = setInterval(() => {
-            target.scrollTop = 0;
-            lockCount++;
-            
-            // After 20 runs (2000ms / 2 seconds), clear the lock so she can scroll normally!
-            if (lockCount > 20) {
-                clearInterval(scrollLockInterval);
-            }
-        }, 100);
     }
 
-    // --- FULL SCREEN BACKGROUND LOGIC ---
-    // If we are on slide 6, add the special class to body. Otherwise remove it.
-    if (slideNumber === 6) {
+    if (slideNumber === 5) {
         document.body.classList.add('final-slide-active');
     } else {
         document.body.classList.remove('final-slide-active');
     }
 
-    // --- SMART AUDIO LOGIC ---
     const bgMusic = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-control');
-    const videoFrame = document.getElementById('video-player'); // Updated ID selector
+    const videoFrame = document.getElementById('video-player');
 
     if (slideNumber === 3) {
-        // CASE: ENTERING VIDEO SLIDE
         bgMusic.pause();
         musicBtn.innerText = "Music: OFF 🔇";
     } 
     else {
-        // CASE: LEAVING VIDEO SLIDE
         if (videoFrame) {
             const currentSrc = videoFrame.src;
-            videoFrame.src = currentSrc; // Resets Google Drive player stream instantly on leave
+            videoFrame.src = currentSrc; 
         }
         
-        // Resume background music if logged in and NOT on the final slide
-        if (slideNumber !== 0 && slideNumber !== 6 && bgMusic.paused) {
+        if (slideNumber !== 0 && slideNumber !== 5 && bgMusic.paused) {
             bgMusic.play();
             musicBtn.innerText = "Music: ON 🎵";
         }
     }
 
+    window.scrollTo(0, 0);
+}
+
 // ======================================================
 // 4. FEATURE: INFINITE SCROLLING WALL
 // ======================================================
-// FEATURE: Infinite Scrolling Wall (Shuffled & Dynamic Speed)
 function populateWall() {
     const col1 = document.getElementById('col-1');
     const col2 = document.getElementById('col-2');
-    
-    // The 4 Color Classes
     const cardColors = ['card-yellow', 'card-violet', 'card-white', 'card-dark'];
 
     if (!col1 || !col2) return;
 
-    // 1. SHUFFLE THE LIST
-    // We create a copy so we don't mess up the original order if needed later
     let shuffledNotes = [...loveNotes];
     for (let i = shuffledNotes.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [shuffledNotes[i], shuffledNotes[j]] = [shuffledNotes[j], shuffledNotes[i]];
     }
 
-    // 2. CLEAR EXISTING CONTENT (In case function runs twice)
     col1.innerHTML = "";
     col2.innerHTML = "";
 
-    // 3. POPULATE COLUMNS
-    // We use ALL the notes now, not just 50.
     shuffledNotes.forEach((noteText, i) => {
         let card = document.createElement('div');
         card.classList.add('reason-card');
-        
-        // Random Color
         const randomColor = cardColors[Math.floor(Math.random() * cardColors.length)];
         card.classList.add(randomColor);
-        
         card.innerText = noteText;
         
-        // Distribute to columns
         if (i % 2 === 0) {
             col1.appendChild(card);
         } else {
@@ -474,29 +425,22 @@ function populateWall() {
         }
     });
 
-    // 4. CLONE FOR SEAMLESS LOOP
     col1.innerHTML += col1.innerHTML;
     col2.innerHTML += col2.innerHTML;
 
-    // 5. DYNAMIC SPEED ADJUSTMENT (FIXED)
-    // The multiplier controls the speed. (0.5 = Fast, 1.0 = Medium)
     const speedMultiplier = 0.5; 
-    
-    // Math: 137 items * 0.5 = ~68 seconds for the whole loop
     const duration = (shuffledNotes.length / 2) * speedMultiplier; 
     
-    // CRITICAL FIX: Set the entire animation property here
     col1.style.animation = `scrollUp ${duration}s linear infinite`;
     col2.style.animation = `scrollDown ${duration + 5}s linear infinite`;
 }
 
 // ======================================================
-// 5. FEATURE: LIGHTBOX (Zoom Images)
+// 5. FEATURE: LIGHTBOX
 // ======================================================
 function openFull(imgElement) {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
-    
     if (imgElement && lightboxImg) {
         lightboxImg.src = imgElement.src;
         lightbox.classList.remove('hidden');
@@ -513,7 +457,6 @@ function closeLightbox() {
 function toggleMusic() {
     const audio = document.getElementById('bg-music');
     const btn = document.getElementById('music-control');
-    
     if (audio.paused) {
         audio.play();
         btn.innerText = "Music: ON 🎵";
@@ -525,7 +468,7 @@ function toggleMusic() {
 
 function playMusic() {
     const audio = document.getElementById('bg-music');
-    audio.volume = 0.2; // 20% Volume
+    audio.volume = 0.2;
     audio.play().catch(error => {
         console.log("Autoplay blocked - Waiting for interaction");
         document.getElementById('music-control').innerText = "Music: OFF 🔇"; 
@@ -533,20 +476,17 @@ function playMusic() {
 }
 
 // ======================================================
-// 7. FEATURE: DAYS COUNTER & HEART RAIN
+// 7. FEATURE: DUAL COUNTER & HEART RAIN
 // ======================================================
 function updateCounter() {
     const now = new Date();
     
-    // Calculate Days Together
     const togetherDiff = now - DATE_TOGETHER;
     const daysTogether = Math.floor(togetherDiff / (1000 * 60 * 60 * 24));
     
-    // Calculate Days Known
     const metDiff = now - DATE_MET;
     const daysKnown = Math.floor(metDiff / (1000 * 60 * 60 * 24));
 
-    // Update the numbers on the screen. (Use Math.max to prevent negative numbers if testing before April 27!)
     document.getElementById('days-together').innerText = Math.max(0, daysTogether);
     document.getElementById('days-known').innerText = daysKnown;
 }
@@ -562,9 +502,7 @@ function createHeartRain() {
             heart.style.fontSize = Math.random() * 20 + 20 + "px";
             heart.style.animationDuration = Math.random() * 3 + 2 + "s";
             document.body.appendChild(heart);
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
+            setTimeout(() => { heart.remove(); }, 5000);
         }, i * 50); 
     }
 }
@@ -575,11 +513,8 @@ function createHeartRain() {
 function openAllReasons() {
     const overlay = document.getElementById('reasons-overlay');
     const container = document.getElementById('full-list-container');
-    
-    // Show the overlay
     overlay.classList.remove('hidden');
 
-    // Populate the list ONLY if it's empty (so we don't duplicate every time)
     if (container.innerHTML.trim() === "") {
         loveNotes.forEach(note => {
             let div = document.createElement('div');
@@ -588,7 +523,6 @@ function openAllReasons() {
             container.appendChild(div);
         });
         
-        // Add a cute footer message
         let footer = document.createElement('div');
         footer.style.textAlign = "center";
         footer.style.padding = "20px";
@@ -604,63 +538,45 @@ function closeAllReasons() {
 }
 
 // ======================================================
-// 9. FEATURE: LOGOUT
+// 9. FEATURE: LOGOUT & UTILITIES
 // ======================================================
-function logout() {
-    location.reload();
-}
+function logout() { location.reload(); }
 
-// FEATURE: Toggle Password Visibility
 function togglePassword() {
     const input = document.getElementById('password-input');
     const toggle = document.getElementById('show-toggle');
-    
-    if (toggle.checked) {
-        input.type = "text"; // Show letters
-    } else {
-        input.type = "password"; // Show dots
-    }
+    input.type = toggle.checked ? "text" : "password";
 }
 
 // ======================================================
-// 10. FEATURE: MILESTONE POPUP
+// 10. FEATURE: TIME CAPSULE POPUPS LOGIC
 // ======================================================
 function checkMilestones() {
     const now = new Date();
     
-    // Calculate years passed for both milestones
     const yearsTogether = (now - DATE_TOGETHER) / (1000 * 60 * 60 * 24 * 365);
     const yearsKnown = (now - DATE_MET) / (1000 * 60 * 60 * 24 * 365);
 
-    // Loop through the milestones to find one to show
     for (let i = 0; i < MILESTONES.length; i++) {
         let m = MILESTONES[i];
         let hasReached = false;
-        
-        // Use separate storage keys for "together" and "met" so they don't block each other
         let storageKey = 'highest_shown_' + m.type; 
 
-        // Check if the current milestone's time requirement has been reached
         if (m.type === 'together' && yearsTogether >= m.year) {
             hasReached = true;
         } else if (m.type === 'met' && yearsKnown >= m.year) {
             hasReached = true;
         }
 
-        // If she reached it, check if she has seen it yet
         if (hasReached) {
             const highestShown = parseInt(localStorage.getItem(storageKey)) || 0;
 
             if (m.year > highestShown) {
-                // Show the popup!
                 document.getElementById('milestone-title').innerText = m.title;
                 document.getElementById('milestone-message').innerText = m.message;
                 document.getElementById('milestone-overlay').classList.remove('hidden');
 
-                // Save it in her phone's memory so it doesn't show up again
                 localStorage.setItem(storageKey, m.year);
-                
-                // Stop checking so we only show one popup at a time
                 return; 
             }
         }

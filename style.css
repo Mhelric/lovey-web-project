@@ -616,7 +616,30 @@ input#show-toggle {
 }
 
 /* =========================================
-   10. MILESTONE TIME CAPSULE POPUP
+   10. UPDATED DUAL DAYS COUNTER STYLES
+   ========================================= */
+#days-counter {
+    max-width: 180px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.highlight-number {
+    font-size: 18px;
+    color: var(--love-pink);
+    font-weight: bold;
+}
+
+.known-text {
+    font-size: 10px;
+    opacity: 0.8;
+    margin-top: 3px;
+    border-top: 1px dashed var(--soft-pink);
+    padding-top: 3px;
+}
+
+/* =========================================
+   11. MILESTONE TIME CAPSULE POPUP STYLES
    ========================================= */
 #milestone-overlay {
     position: fixed;
@@ -624,7 +647,7 @@ input#show-toggle {
     width: 100vw; height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
-    z-index: 10000; /* Highest z-index to appear over everything */
+    z-index: 10000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -655,153 +678,39 @@ input#show-toggle {
 }
 
 /* =========================================
-   11. UPDATED DAYS COUNTER STYLES
+   12. MOBILE RESPONSIVENESS FIXES
    ========================================= */
-#days-counter {
-    max-width: 180px; /* Slightly wider to fit the text */
-    text-align: center;
-    line-height: 1.3;
-}
-
-.highlight-number {
-    font-size: 18px;
-    color: var(--love-pink);
-    font-weight: bold;
-}
-
-.known-text {
-    font-size: 10px;
-    opacity: 0.8;
-    margin-top: 3px;
-    border-top: 1px dashed var(--soft-pink);
-    padding-top: 3px;
-}
-
-/* =========================================
-   12. RELATIONSHIP TIMELINE STYLES
-   ========================================= */
-#slide-5 {
-    height: 78vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    overflow-anchor: none; /* 👈 Tell the browser STOP hijacking our scroll position! */
-    padding-top: 110px; 
-    padding-bottom: 30px;
-    box-sizing: border-box;
-}
-
-.timeline {
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-    box-sizing: border-box;
-}
-
-/* The vertical line centered in the middle */
-.timeline::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    background-color: var(--soft-pink);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 2px;
-    height: 0; /* Starts at 0 height */
-}
-
-/* Smooth growth transition for the line when slide is opened */
-.slide.active .timeline::after {
-    animation: drawLine 5.5s linear forwards;
-}
-
-@keyframes drawLine {
-    from { height: 0; }
-    to { height: 100%; }
-}
-
-.timeline-item {
-    position: relative;
-    width: 50%;
-    padding: 10px 15px;
-    box-sizing: border-box;
-    opacity: 0;
-}
-
-/* Alternate positioning: Left side vs Right side */
-.timeline-item:nth-child(odd) {
-    left: 0;
-    text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-    left: 50%;
-    text-align: left;
-}
-
-/* Clean scaling pop-in effect for the milestone contents */
-.slide.active .timeline-item {
-    animation: popTimelineCard 0.5s ease forwards;
-}
-
-/* Stagger item fade-ins smoothly starting right from the top entry */
-.slide.active .timeline-item:nth-child(1) { animation-delay: 0.1s; }
-.slide.active .timeline-item:nth-child(2) { animation-delay: 0.5s; }
-.slide.active .timeline-item:nth-child(3) { animation-delay: 0.9s; }
-.slide.active .timeline-item:nth-child(4) { animation-delay: 1.3s; }
-.slide.active .timeline-item:nth-child(5) { animation-delay: 1.7s; }
-.slide.active .timeline-item:nth-child(6) { animation-delay: 2.1s; }
-.slide.active .timeline-item:nth-child(7) { animation-delay: 2.5s; }
-.slide.active .timeline-item:nth-child(8) { animation-delay: 2.9s; }
-.slide.active .timeline-item:nth-child(9) { animation-delay: 3.3s; }
-.slide.active .timeline-item:nth-child(10) { animation-delay: 3.7s; }
-.slide.active .timeline-item:nth-child(11) { animation-delay: 4.1s; }
-
-@keyframes popTimelineCard {
-    from { opacity: 0; transform: scale(0.85); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* Guide dots fixed precisely along the center timeline line */
-.timeline-dot {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: var(--pop-yellow);
-    border: 3px solid var(--love-pink);
-    border-radius: 50%;
-    top: 22px;
-    z-index: 2;
-}
-
-.timeline-item:nth-child(odd) .timeline-dot {
-    right: -5px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot {
-    left: -5px;
-}
-
-.timeline-date {
-    font-weight: bold;
-    color: var(--love-pink);
-    font-size: 12px;
-    margin-bottom: 4px;
-}
-
-/* Compact wrapper adjustments */
-.timeline-content {
-    background: white;
-    padding: 10px;
-    border-radius: 12px;
-    font-size: 12px;
-    color: var(--deep-wine);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    border: 1px solid var(--soft-pink);
-    display: inline-block; /* Makes the container compact around text length */
-    text-align: left;
-    max-width: 100%;
-    word-wrap: break-word;
+@media screen and (max-width: 480px) {
+    #music-control, #logout-btn, .close-overlay-btn {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+    #days-counter {
+        font-size: 10px;
+        padding: 6px 10px;
+        max-width: 150px;
+    }
+    #logout-btn {
+        top: 50px;
+    }
+    .card {
+        padding: 25px 15px 20px 15px;
+    }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+    .video-wrapper { margin-bottom: 10px; }
+    .reasons-header {
+        padding: 15px 25px;
+        width: 70%;
+    }
+    .reasons-header h2 { font-size: 1.2rem; }
+    .floating-nav-buttons { bottom: 15px; }
+    .floating-nav-buttons button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+    .final-glass-box {
+        padding: 20px 15px;
+        max-width: 95%;
+    }
 }
