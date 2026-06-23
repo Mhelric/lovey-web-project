@@ -329,7 +329,7 @@ function attemptLogin() {
 
         setTimeout(() => {
             nextSlide(1);
-            checkMilestones(); // Triggers the Time Capsule logic smoothly upon login
+            checkMilestones(); 
         }, 1500);
 
     } else {
@@ -347,7 +347,7 @@ function attemptLogin() {
 }
 
 // ======================================================
-// 3. SLIDE NAVIGATION (Video reset, Music & Custom Backgrounds)
+// 3. SLIDE NAVIGATION
 // ======================================================
 function nextSlide(slideNumber) {
     document.querySelectorAll('.slide').forEach(slide => {
@@ -371,16 +371,15 @@ function nextSlide(slideNumber) {
 
     const bgMusic = document.getElementById('bg-music');
     const musicBtn = document.getElementById('music-control');
-    const videoFrame = document.getElementById('video-player');
+    const videoElement = document.getElementById('video-player');
 
     if (slideNumber === 3) {
         bgMusic.pause();
         musicBtn.innerText = "Music: OFF 🔇";
     } 
     else {
-        if (videoFrame) {
-            const currentSrc = videoFrame.src;
-            videoFrame.src = currentSrc; 
+        if (videoElement) {
+            videoElement.pause(); 
         }
         
         if (slideNumber !== 0 && slideNumber !== 5 && bgMusic.paused) {
@@ -447,13 +446,13 @@ function openFull(imgElement) {
     }
 }
 
+// ======================================================
+// 6. FEATURE: MUSIC CONTROLS
+// ======================================================
 function closeLightbox() {
     document.getElementById('lightbox').classList.add('hidden');
 }
 
-// ======================================================
-// 6. FEATURE: MUSIC CONTROLS
-// ======================================================
 function toggleMusic() {
     const audio = document.getElementById('bg-music');
     const btn = document.getElementById('music-control');
@@ -470,7 +469,7 @@ function playMusic() {
     const audio = document.getElementById('bg-music');
     audio.volume = 0.2;
     audio.play().catch(error => {
-        console.log("Autoplay blocked - Waiting for interaction");
+        console.log("Autoplay blocked");
         document.getElementById('music-control').innerText = "Music: OFF 🔇"; 
     });
 }
