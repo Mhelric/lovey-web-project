@@ -2,8 +2,8 @@
 // 1. CONFIGURATION & MILESTONES
 // ======================================================
 const CORRECT_PASSWORD = "sabaw"; 
-const DATE_MET = new Date("2024-10-18"); // When you met
-const DATE_TOGETHER = new Date("2025-04-27"); // Official relationship date
+const DATE_MET = new Date("2025-10-18"); // When you met
+const DATE_TOGETHER = new Date("2026-04-27"); // Official relationship date
 
 const MILESTONES = [
     {
