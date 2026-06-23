@@ -5,6 +5,35 @@ const CORRECT_PASSWORD = "sabaw";
 const DATE_MET = new Date("2025-10-18"); // The day you met
 const DATE_TOGETHER = new Date("2026-04-27"); // The day you became official!
 
+// THE MILESTONES (Add new years here! Keep highest year at the top)
+const MILESTONES = [
+    {
+        year: 5,
+        type: "together", // Official anniversary
+        title: "5 Years Official! 🥂",
+        message: "I cant believe it but we're here my lovey! I will continue on loving you more!!!"
+    },
+    {
+        
+        year: 5,
+        type: "met", // The day you met
+        title: "5 Years since nung makilala kita loveyyy! 🥂",
+        message: "Half a decade with my favorite person. I love you more today than yesterday, but not as much as tomorrow!"
+    },
+     {
+        year: 1,
+        type: "together", // Official anniversary
+        title: "Happy 1st Anniversary my lovey!! 🥂",
+        message: "Can you believe it's been a whole year since we became official? Time flies when you're having fun with the love of your life!"
+    },
+    {
+        year: 1,
+        type: "met", // The day you met
+        title: "Happy 1 year since nung first chat natin loveyyy! 🎉",
+        message: "One year ago today, you walked into my life and changed everything for the better. I am so thankful I met you lovey ko!"
+    }
+];
+
 // THE 274 REASONS DATA
 const loveNotes = [
     "1. I love that we clicked and connected so quick when we first started talking",
@@ -315,6 +344,7 @@ function attemptLogin() {
         // 5. Navigate to Slide 1 (Intro) after delay
         setTimeout(() => {
             nextSlide(1);
+            checkMilestones();
         }, 1500);
 
     } else {
@@ -590,4 +620,53 @@ function togglePassword() {
     } else {
         input.type = "password"; // Show dots
     }
+}
+
+// ======================================================
+// 10. FEATURE: MILESTONE POPUP
+// ======================================================
+function checkMilestones() {
+    const now = new Date();
+    
+    // Calculate years passed for both milestones
+    const yearsTogether = (now - DATE_TOGETHER) / (1000 * 60 * 60 * 24 * 365);
+    const yearsKnown = (now - DATE_MET) / (1000 * 60 * 60 * 24 * 365);
+
+    // Loop through the milestones to find one to show
+    for (let i = 0; i < MILESTONES.length; i++) {
+        let m = MILESTONES[i];
+        let hasReached = false;
+        
+        // Use separate storage keys for "together" and "met" so they don't block each other
+        let storageKey = 'highest_shown_' + m.type; 
+
+        // Check if the current milestone's time requirement has been reached
+        if (m.type === 'together' && yearsTogether >= m.year) {
+            hasReached = true;
+        } else if (m.type === 'met' && yearsKnown >= m.year) {
+            hasReached = true;
+        }
+
+        // If she reached it, check if she has seen it yet
+        if (hasReached) {
+            const highestShown = parseInt(localStorage.getItem(storageKey)) || 0;
+
+            if (m.year > highestShown) {
+                // Show the popup!
+                document.getElementById('milestone-title').innerText = m.title;
+                document.getElementById('milestone-message').innerText = m.message;
+                document.getElementById('milestone-overlay').classList.remove('hidden');
+
+                // Save it in her phone's memory so it doesn't show up again
+                localStorage.setItem(storageKey, m.year);
+                
+                // Stop checking so we only show one popup at a time
+                return; 
+            }
+        }
+    }
+}
+
+function closeMilestone() {
+    document.getElementById('milestone-overlay').classList.add('hidden');
 }
